@@ -5,10 +5,11 @@ const swaggerUi = require('swagger-ui-express');
 const cors = require('cors');
 const os = require ('os');
 
-// Habilitar CORS
-app.use(cors());
+
 const app = express();
 const port = 3000;
+// Habilitar CORS
+app.use(cors());
 // Middleware para manejar errores
 const errorHandler = (err, req, res, next) => {
     console.error(err.stack);
