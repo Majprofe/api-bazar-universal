@@ -5,7 +5,8 @@ const swaggerUi = require('swagger-ui-express');
 const cors = require('cors');
 const os = require ('os');
 
-
+// Habilitar CORS
+app.use(cors());
 const app = express();
 const port = 3000;
 // Middleware para manejar errores
@@ -104,8 +105,7 @@ app.get('/item/:id', (req, res, next) => {
     });
 });
 
-// Habilitar CORS
-app.use(cors());
+
 
 // Middleware para manejar errores
 app.use(errorHandler);
